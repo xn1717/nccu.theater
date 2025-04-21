@@ -148,13 +148,18 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
   --background-text: rgb(229 226 223);
   --sidebar-color: rgb(49 45 44);
   --sidebar-text: rgb(238 237 236);
-  --accent-color: rgb(218 46 46);
+  --accent-color: rgb(255 246 147);
   --accent-text: rgb(255 255 255);
   --sidebar-color-hsla: rgb(49 45 44 / 75%);
 }
 /* twine-user-stylesheet #2: "base.css" */
 /* Common style options */
 body {
+  min-height: 100%;
+  max-width: 42em;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
     background-color: var(--background-color);
     color: var(--background-text);
     font-family: var(--text-font);
@@ -206,7 +211,7 @@ a.link-external::after {
 }
 /* twine-user-stylesheet #4: "clean-base.css" */
 :root {
-    --accent-color-20: rgb(218 46 46 / 20%);
+    --accent-color-20: rgb(255 246 147 / 20%);
     --background-text-20: rgb(229 226 223 / 20%);
     --background-text-50: rgb(229 226 223 / 50%);
     --radius: 4px;
@@ -220,7 +225,7 @@ body button[type="button"] {
     background-color: var(--sidebar-color);
     border-radius: var(--radius);
     border: none !important;
-    box-shadow: 1px 1px 3px #0002;
+    box-shadow: 1px 1px 3px rgba(9, 9, 6, 0.983);
     color: var(--sidebar-text);
     font-family: var(--button-font);
 }
@@ -232,7 +237,7 @@ body select {
 body textarea,
 body input[type="text"] {
     background-color: var(--accent-color-20);
-    box-shadow: 1px 1px 3px inset #0002;
+    box-shadow: 1px 1px 3px rgba(255, 246, 147, 0.983);
 	font-family: var(--button-font);
 }
 
@@ -259,7 +264,7 @@ body select:focus:not(:disabled),
 body textarea:hover:not(:disabled),
 body textarea:focus:not(:disabled) {
     background-color: var(--accent-color);
-    box-shadow: 1px 1px 3px inset #0002;
+    box-shadow: 1px 1px 3px rgba(255, 246, 147, 0.983);
     color: var(--accent-text);
 }
 
@@ -281,7 +286,9 @@ body fieldset legend {
 }
 
 body #passages {
+    min-height: 100%;
     max-width: 42em;
+    overflow: auto;
 }
 
 body #passages input,
@@ -295,7 +302,7 @@ body #passages button[type="button"] {
 
 body #passages img {
     border-radius: var(--radius);
-    box-shadow: 1px 1px 3px #0002;
+    box-shadow: 1px 1px 3px rgba(255, 246, 147, 0.983);
 }
 
 body #passages hr {
@@ -330,7 +337,7 @@ html[data-debug-view] #debug-bar {
 
 #ui-dialog #ui-dialog-titlebar {
     background-color: var(--sidebar-color);
-    box-shadow: 1px 1px 2px #0002;
+    box-shadow: 1px 1px 3px rgba(49, 45, 44, 0.983);
     color: var(--sidebar-text);
     padding: 0.5em 0 0.25em;
 }
@@ -364,7 +371,7 @@ html[data-debug-view] #debug-bar {
 
 #ui-bar {
     backdrop-filter: blur(3px);
-    box-shadow: 1px 1px 3px #0002;
+    box-shadow: 1px 1px 3px rgba(49, 45, 44, 0.983);
     background-color: var(--sidebar-color-hsla);
     color: var(--sidebar-text);
 }
